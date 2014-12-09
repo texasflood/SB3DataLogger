@@ -16,6 +16,7 @@ extern volatile uint8_t new_data;
 
 uint16_t ADC_results_2[ADC_BUFFER_SIZE_2];
 int ADC_count_2 = 0;
+int volCounter = 0;
 uint16_t ADCVal = 0;
 
 //Private function prototypes
@@ -24,19 +25,20 @@ void ADC_RCC_Config(void);
 void ADC_GPIO_Config(void);
 void ADC_NVIC_Config(void);
 
-static uint16_t lookup[1024];
+static uint16_t lookup[907];
 uint64_t A;
 uint64_t B1;
 uint64_t B2;
 uint64_t C;
 uint64_t D;
 uint64_t xL;
-int distortionOn = 1;
+int distortionOn = 0;
 uint64_t E = 384858382;
 uint64_t F = 3489025723049;
 
 void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
+void distortionSwitch(int distortionSet);
 //------------------------------------------------------------------------
 
 //Initialise ADC for independent sampling on demand
@@ -96,7 +98,7 @@ void ADC_Config(void)
 	ADC_ExternalTrigConvCmd(ADC1, ENABLE);
 	
 	//ADC1 regular channels configuration (just one channel)
-  ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_239Cycles5);    
+  ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_1Cycles5);    
 	
 	//power up ADC
 	ADC_Cmd(ADC1, ENABLE);
@@ -139,13 +141,22 @@ void ADC1_IRQHandler(void)
 		ADCVal = lookup[ADCVal];
 		ADCVal = ADCVal << 2;
 	}
-	E = E*67 + 20*F;
-	F = 60284*98 + E/901;
-	E = E*67 + 20*F;
-	F = 60284*9758 + E/91;
-	E = E*67 + 20*F;
-	F = 6074*98 + E/999;
+	/*E = 56786*F -89/E + A;
+	F = 3532/F + 2354*E;
+	E = 56786*F -89/E + A;
+	F = 332/F + 2354*E;
+	E = 5786*F -892/E + A;
+	F = 353/F + 2354*E;
+	E = 5676*F -249/E - A;
+	F = 3532/F + 23534*E;
+	E = 56786*F -89/E + A*8573;
+	F = 3532/F + 2354*E;
+	F = 353/F + 2354*E;
+	E = 5676*F -249/E - A;*/
+	
 	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
+	
+	
 	
 	/*if (ADC_count_2 > ADC_BUFFER_SIZE_2)
 	{
@@ -192,7 +203,7 @@ void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
 	uint64_t squared;
 	uint64_t xL;
 	
-	for(xL = 0; xL < 1024; xL++)
+	for(xL = 0; xL < m + 1; xL++)
 	{
 		squared = xL*xL;
 		if (signOfANeg == 0)
@@ -210,6 +221,7 @@ void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
        }
 			 else
 			 {
+					if (y > m) {y = m;}
 					lookup[xL] = (uint16_t)y;
 			 }
    }
@@ -228,9 +240,14 @@ void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
        }
 			 else
 			 {
+					if (y > m) {y = m;}
 					lookup[xL] = (uint16_t)y;
 			 }
    }
  }
 }
- 
+
+void distortionSwitch(int distortionSet)
+{
+	distortionOn = distortionSet;
+}

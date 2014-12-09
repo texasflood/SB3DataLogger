@@ -64,8 +64,8 @@ void LED_flash(void);
 void DAC_config(void);
 int signOfANeg = 1;
 uint64_t a = 0;
-uint64_t m = 1023;
-uint64_t d = 5;
+uint64_t m = 906;
+uint64_t d = 20;
 //------------------------------------------------------------------------------
 
 //Main function (execution starts here after startup file)
@@ -92,7 +92,7 @@ int main(void)
 	//------------------------------------------------------------------------------
 	while (1)
 	{
-		//check_and_process_received_command();
+		check_and_process_received_command();
 		//LED_flash();
 	}
 	//------------------------------------------------------------------------------
@@ -130,7 +130,7 @@ void check_and_process_received_command(void)
 	}
 	else if (command_flag == 2)
 	{
-		//An LED command has been received
+		//A distortion command has been received
 		
 		//Check whether we have also received the value attached to the command (ie on or off)
 		if (value_received == 1)
@@ -138,16 +138,23 @@ void check_and_process_received_command(void)
 			//Reset command flag
 			command_flag = 0;
 			
-			//Set LED based on value (on or off)
-			if (value == 0)
-			{
-				LED_off();
-			}
-			else
-			{
-				LED_on();
-			}
+			//Set distortion based on value (on or off)
+			distortionSwitch(value);
 		}
+	}
+	else if (command_flag == 4)
+	{
+		if (value_received == 1)
+		{
+			command_flag = 0;
+			TIM_DeInit(TIM3);
+			DAC_SetChannel1Data(DAC_Align_12b_R, 2048);
+			d = (uint64_t) value;
+			distortInit(signOfANeg, a, m, d);
+			fillLookup(signOfANeg, a, m, d);
+			TIM3_init();
+		}
+		
 	}
 }
 

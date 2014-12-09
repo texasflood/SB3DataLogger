@@ -3,10 +3,7 @@
 #include "TIM.h"
 #include "ADC.h"
 
-// ADC Buffer Definitions
-#define ADC_BUFFER_SIZE 100
 
-uint16_t ADC_results[ADC_BUFFER_SIZE];
 int ADC_count = 0;
 
 void NVIC_Configuration(void);
@@ -64,7 +61,7 @@ void TIM3_init(void)
 
 	//Init timer
   TIM_TimeBaseStructure.TIM_Period = 1; //65535
-  TIM_TimeBaseStructure.TIM_Prescaler = 500;
+  TIM_TimeBaseStructure.TIM_Prescaler = 545;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	
