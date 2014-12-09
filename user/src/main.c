@@ -55,19 +55,17 @@ volatile int value_received;
 
 //ADC variables
 volatile uint8_t new_data;
-
-static uint16_t lookup[1023];
-
 //------------------------------------------------------------------------------
 
 //Function prototypes for functions in main.c file
 
 void check_and_process_received_command(void);
-void adjustLookup(int distortion);
 void LED_flash(void);
 void DAC_config(void);
-
-
+int signOfANeg = 1;
+uint64_t a = 70;
+uint64_t m = 1023;
+uint64_t d = 3;
 //------------------------------------------------------------------------------
 
 //Main function (execution starts here after startup file)
@@ -84,7 +82,8 @@ int main(void)
 	{
 		LED_on();
 	}
-	adjustLookup(10);
+	distortInit(signOfANeg, a, m, d);
+	fillLookup(signOfANeg, a, m, d);
 	TIM3_init();
 	DAC_config();
 	ADC_init();
@@ -204,12 +203,3 @@ void assert_failed(uint8_t* file, uint32_t line)
 }
 
 #endif
-
-void adjustLookup(int distortion)
-{
-	int i;
-	for(i = 0; i < sizeof(lookup)/sizeof(lookup[0]); i++)
-	{
-		lookup[i] = i;
-	}
-}

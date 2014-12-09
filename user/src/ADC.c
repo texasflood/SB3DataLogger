@@ -24,6 +24,16 @@ void ADC_RCC_Config(void);
 void ADC_GPIO_Config(void);
 void ADC_NVIC_Config(void);
 
+static uint16_t lookup[1024];
+uint64_t A;
+uint64_t B1;
+uint64_t B2;
+uint64_t C;
+uint64_t D;
+uint64_t xL;
+
+void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
+void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 //------------------------------------------------------------------------
 
 //Initialise ADC for independent sampling on demand
@@ -95,7 +105,7 @@ void ADC_Config(void)
 void ADC_RCC_Config(void)
 {
 	//Set ADC clock divider
-	RCC_ADCCLKConfig(RCC_PCLK2_Div2);
+	RCC_ADCCLKConfig(RCC_PCLK2_Div8);
 	
 	//Enable DMA periph clock
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
@@ -120,7 +130,9 @@ void ADC1_IRQHandler(void)
 	
 	//ADC_results_2[ADC_count_2++] = ADC_GetConversionValue(ADC1);
 	ADCVal = ADC_GetConversionValue(ADC1);
-	
+	ADCVal = (ADCVal >> 2);
+	ADCVal = lookup[ADCVal];
+	ADCVal = ADCVal << 2;
 	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
 	
 	/*if (ADC_count_2 > ADC_BUFFER_SIZE_2)
@@ -143,4 +155,70 @@ void ADC_NVIC_Config(void)
   NVIC_Init(&NVIC_InitStructure);
 }
 
+void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
+{
+	B1 = 6*d*m*m*(-1+d*d);
+	if (signOfANeg == 1)
+	{
+		A = (m*m*m)*(d*d*d-3*d+2) - 6*a*d*(m*m)*(-1+d*d) + 4*(a*a)*(d*d*d)*(-2*a+3*m);
+		B2 = 24*a*d*d*d*(m - a);
+		C = 12*d*d*d*(m - 2*a);
+	}
+	else
+	{
+		A = (m*m*m)*(d*d*d-3*d+2) + 6*a*d*(m*m)*(-1+d*d) + 4*(a*a)*(d*d*d)*(2*a+3*m);
+		B2 = 24*a*d*d*d*(m + a);
+		C = 12*d*d*d*(m + 2*a);
+	}
 
+	D = 8*d*d*d;
+}
+
+void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
+{
+	uint64_t y;
+	uint64_t squared;
+	uint64_t xL;
+	
+	for(xL = 0; xL < 1024; xL++)
+	{
+		squared = xL*xL;
+		if (signOfANeg == 0)
+   {
+       y = (A - B1*xL - B2*xL + C*squared - D*xL*squared);
+       y = y/(4*m*m);
+       //printf("y = %llu, x = %llu\n",y,xL);
+       if(xL >= a + m/2 + m/(2*d))
+       {
+           lookup[xL] = (uint16_t)m;
+       }
+       else if(xL <= a + m/2 - m/(2*d))
+       {
+           lookup[xL] = 0;
+       }
+			 else
+			 {
+					lookup[xL] = (uint16_t)y;
+			 }
+   }
+   else
+   {
+       y = (A - B1*xL + B2*xL + C*squared - D*xL*squared);
+       y = y/(4*m*m);
+       //printf("y = %llu, x = %llu\n",y,xL);
+       if(xL >= -a + m/2 + m/(2*d))
+       {
+           lookup[xL] = (uint16_t)m;
+       }
+       else if(xL <= -a + m/2 - m/(2*d))
+       {
+           lookup[xL] = 0;
+       }
+			 else
+			 {
+					lookup[xL] = (uint16_t)y;
+			 }
+   }
+ }
+}
+ 
