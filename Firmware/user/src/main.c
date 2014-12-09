@@ -53,6 +53,7 @@ volatile int command_flag;
 volatile int value;
 volatile int value_received;
 volatile int volume = 1;
+volatile int echoGain = 0;
 
 //ADC variables
 volatile uint8_t new_data;
@@ -71,6 +72,7 @@ int signOfANeg = 1;
 uint64_t a = 0;
 uint64_t m = 1023;
 uint64_t d = 1;
+int DC_off;
 //------------------------------------------------------------------------------
 
 //Main function (execution starts here after startup file)
@@ -85,7 +87,7 @@ int main(void)
 	{
 		LED_on();
 	}
-	
+	delaySwitch(0);
 	distortInit(signOfANeg, a, m, d);
 	fillLookup(signOfANeg, a, m, d);
 	TIM2_init();
@@ -181,6 +183,33 @@ void check_and_process_received_command(void)
 		{
 			command_flag = 0;
 			volume = value;
+		}
+	}
+	// NEW Delay initialise
+	else if (command_flag == 5)
+	{
+		if (value_received == 1)
+		{
+			command_flag = 0;
+			// Deinitialise so that output buffer is refreshed
+			
+			TIM_DeInit(TIM3);
+			DAC_SetChannel1Data(DAC_Align_12b_R, 2048);
+			delaySwitch(value);
+			TIM3_init();
+		}
+	}
+	// NEW Delay set value
+	else if (command_flag == 6)
+	{
+		if (value_received == 1)
+		{
+			command_flag = 0;
+			TIM_DeInit(TIM3);
+			DAC_SetChannel1Data(DAC_Align_12b_R, 2048);
+			echoGain = value;
+			delayInit();
+			TIM3_init();
 		}
 	}
 }

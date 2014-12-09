@@ -82,3 +82,707 @@ Build target 'SB3'
 linking...
 Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=7884  
 "SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+user\src\main.c(196): warning:  #223-D: function "delaySwitch" declared implicitly
+user\src\main.c(201): error:  #127: expected a statement
+user\src\main.c(213): warning:  #12-D: parsing restarts here after previous syntax error
+user\src\main.c(215): error:  #268: declaration may not appear after executable statement in block
+user\src\main.c(216): error:  #65: expected a ";"
+user\src\main.c(277): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+user\src\main.c(277): error: At end of source:  #67: expected a "}"
+user\src\main.c(277): error: At end of source:  #67: expected a "}"
+Target not created
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+user\src\main.c(201): error:  #127: expected a statement
+user\src\main.c(213): warning:  #12-D: parsing restarts here after previous syntax error
+user\src\main.c(215): error:  #268: declaration may not appear after executable statement in block
+user\src\main.c(216): error:  #65: expected a ";"
+user\src\main.c(277): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+user\src\main.c(277): error: At end of source:  #67: expected a "}"
+user\src\main.c(277): error: At end of source:  #67: expected a "}"
+compiling TIM.c...
+Target not created
+Build target 'SB3'
+compiling main.c...
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(198): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7536 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7536 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7536 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling main.c...
+linking...
+Program Size: Code=7540 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(175): error:  #65: expected a ";"
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(308): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(308): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7568 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7568 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7568 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(308): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7564 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7564 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7564 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(312): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=7584 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(207): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7584 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7584 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7584 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(218): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(218): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(218): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(212): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(218): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7596 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(210): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(219): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7608 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7608 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7608 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(222): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7636 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7636 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(222): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7636 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7636 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(222): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7632 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7632 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(223): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7600 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(223): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(223): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(223): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7544 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7544 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(210): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7552 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7544 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7544 RO-data=320 RW-data=172 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(196): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+compiling main.c...
+linking...
+Program Size: Code=7528 RO-data=320 RW-data=160 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+compiling main.c...
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(196): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7540 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7540 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(196): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(199): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7532 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling main.c...
+linking...
+Program Size: Code=7512 RO-data=320 RW-data=156 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling main.c...
+user\src\main.c(194): error:  #20: identifier "DC_off" is undefined
+user\src\main.c(208): error:  #20: identifier "DC_off" is undefined
+Target not created
+Build target 'SB3'
+compiling main.c...
+linking...
+Program Size: Code=7580 RO-data=320 RW-data=160 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(197): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(206): warning:  #68-D: integer conversion resulted in a change of sign
+compiling main.c...
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(200): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(203): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(210): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7756 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7756 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(201): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(204): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(210): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7764 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7808 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7808 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(202): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(211): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7808 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(205): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(208): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7788 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7788 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(206): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(215): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7812 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(206): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(215): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7812 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7812 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(206): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(209): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(215): warning:  #68-D: integer conversion resulted in a change of sign
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 4 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7768 RO-data=320 RW-data=168 ZI-data=7880  
+"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 

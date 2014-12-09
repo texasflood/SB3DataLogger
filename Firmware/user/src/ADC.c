@@ -17,7 +17,7 @@ extern volatile uint8_t new_data;
 uint16_t ADC_results_2[ADC_BUFFER_SIZE_2];
 int ADC_count_2 = 0;
 int volCounter = 0;
-volatile uint16_t ADCVal = 0;
+volatile int64_t ADCVal;
 
 //Private function prototypes
 void ADC_Config(void);
@@ -29,7 +29,9 @@ uint16_t getVol(void);
 
 extern volatile uint16_t max_vol;
 static uint16_t lookup[1024];
-static uint16_t echo[2000];
+//NEW
+volatile static uint16_t outputs[2000];
+extern volatile int echoGain;
 uint64_t A;
 uint64_t B1;
 uint64_t B2;
@@ -37,10 +39,14 @@ uint64_t C;
 uint64_t D;
 uint64_t xL;
 int distortionOn = 0;
+int delayOn = 0;	// NEW
+volatile int array_position = 0;	// NEW Stores position of oldest entry in output buffer
 
 void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void distortionSwitch(int distortionSet);
+void delaySwitch(int delaySet); // NEW
+void delayInit(void);
 int output;
 extern volatile int volume;
 //------------------------------------------------------------------------
@@ -143,21 +149,44 @@ void ADC1_IRQHandler(void)
 	{
 		max_vol = (ADCVal >> 2);
 	}
+	// NEW delay function
+	
+	
 	if (distortionOn == 1)
 	{
 		ADCVal = (ADCVal >> 2);
 		ADCVal = lookup[ADCVal];
 		ADCVal = ADCVal << 2;
 	}
-	ADCVal = ADCVal / volume;
-	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
 	
-	/*if (ADC_count_2 > ADC_BUFFER_SIZE_2)
+	if (delayOn == 1)
 	{
-		ADC_count_2 = 0;
+		
+		ADCVal = ADCVal + (echoGain*outputs[array_position]);
+		ADCVal = ADCVal/5;
+		if (ADCVal > 4095) ADCVal = 4095;
+		if (ADCVal < 0) ADCVal = 0;
+		outputs[array_position] = ADCVal;
+		
+		array_position++;
+		if (array_position == 2000)
+		{
+			array_position = 0;
+		}
+		ADCVal = ADCVal + 2048 - ((echoGain + 1)*2047)/5;
+	}	
+	/*else
+	{
+		ADCVal = ADCVal >> 2;
+		ADCVal = 1536 + ADCVal;
 	}*/
 	
-	//LED_toggle();
+	ADCVal = ADCVal / volume;
+	if (ADCVal > 4095) ADCVal = 4095;
+	if (ADCVal < 0) ADCVal = 0;
+	
+	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
+	
 }
 
 void ADC_NVIC_Config(void)
@@ -254,4 +283,31 @@ uint16_t getVol(void)
 void clearVol(void)
 {
 	max_vol = 0;
+}
+
+//NEW Delay switch
+void delaySwitch(int delaySet)
+{
+	int i;
+	delayOn = delaySet;
+	// Refresh if turning on
+	if (delaySet)
+	{
+		for(i=0; i<2000; i++)
+		{
+			outputs[i] = 0;
+		}
+		array_position = 0;		
+	}
+}
+
+//NEW Delay initialise
+void delayInit()
+{
+	int i;
+	for(i=0; i<2000; i++)
+	{
+		outputs[i] = 0;
+	}
+	array_position = 0;
 }

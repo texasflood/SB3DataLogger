@@ -13,3 +13,5 @@ void ComCallback(int portNumber, int eventMask,void *CallbackData);
 int set_treble (double value);
 int set_offset(int offset);
 int set_volume (int value);
+int switch_echo (int value);
+int set_echo (int value);

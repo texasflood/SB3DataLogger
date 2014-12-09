@@ -48,6 +48,8 @@ int CVICALLBACK COM_button_hit (int panel, int control, int event,
 	InstallComCallback(com_port_no, LWRS_RECEIVE, 2, 10, ComCallback, CallbackData);
 	set_distortion(1);
 	switch_distortion(0);
+	switch_echo(0);
+	set_echo(0);
 	
 	return 0;
 }
@@ -125,5 +127,29 @@ int CVICALLBACK changeVolume (int panel, int control, int event,
 	GetCtrlVal(panel, control, &volumeValue);
 	
 	set_volume(volumeValue);
+	return 0;
+}
+
+int CVICALLBACK echo_button_hit (int panel, int control, int event,
+void *callbackData, int eventData1, int eventData2)
+{   
+	int button_state;
+
+    if (event!=EVENT_COMMIT) return 0; 
+    
+	//Get value (on or off)
+    GetCtrlVal(panel, control, &button_state);
+    
+    switch_echo (button_state);
+	return 0;
+}
+
+int CVICALLBACK changeEcho (int panel, int control, int event,
+void *callbackData, int eventData1, int eventData2)
+{
+	int echoValue;
+	if (event!=EVENT_COMMIT) return 0;  
+	GetCtrlVal(panel, control, &echoValue);
+	set_echo(echoValue);
 	return 0;
 }

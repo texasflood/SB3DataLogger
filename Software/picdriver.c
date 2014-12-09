@@ -192,6 +192,34 @@ int set_volume (int value)
   return no_error;
 }
 
+int switch_echo (int value)
+{
+	if (com_port_open == 0)
+	{
+		MessagePopup ("Error", "No Open COM Port");
+		return 0;
+	}
+	tx_buff[0] = 5;	//Command
+	tx_buff[1] = value; //value (on or off)
+	send_command(2);
+	return no_error;
+}
+
+int set_echo (int value)
+{
+	if (com_port_open == 0)
+	{
+		MessagePopup ("Error", "No Open COM Port");
+		return 0;
+	}
+	tx_buff[0] = 6;	//Command
+	tx_buff[1] = value; //value
+	send_command(2);
+	return no_error;
+}
+
+
+
 /*int set_offset (int offset)
 {
 	BYTE sign;

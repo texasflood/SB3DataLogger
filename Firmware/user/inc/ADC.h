@@ -8,4 +8,5 @@ void clearVol(void);
 uint16_t getVol(void);
 void shelvingHighInitialise(int coefficient1, int coefficient2, int coefficient3, int coefficient4, int coefficient5);
 void shelvingHighSwitch(int shelvingSet);
-
+void delaySwitch(int delaySet); // NEW
+void delayInit(void);

@@ -16,12 +16,14 @@
 
 #define  PANEL                           1
 #define  PANEL_quit_button               2       /* callback function: quit_button_hit */
-#define  PANEL_distortion_button         3       /* callback function: distortion_button_hit */
-#define  PANEL_USER_COM_PORT             4
-#define  PANEL_COM_connect               5       /* callback function: COM_button_hit */
-#define  PANEL_distortion                6       /* callback function: distortionChange */
-#define  PANEL_output_volume_slide       7
-#define  PANEL_NUMERICSLIDE              8       /* callback function: changeVolume */
+#define  PANEL_USER_COM_PORT             3
+#define  PANEL_COM_connect               4       /* callback function: COM_button_hit */
+#define  PANEL_distortion                5       /* callback function: distortionChange */
+#define  PANEL_output_volume_slide       6
+#define  PANEL_NUMERICSLIDE              7       /* callback function: changeVolume */
+#define  PANEL_Echo                      8       /* callback function: changeEcho */
+#define  PANEL_distortion_button         9       /* callback function: distortion_button_hit */
+#define  PANEL_echoSwitch                10      /* callback function: echo_button_hit */
 
 
      /* Menu Bars, Menus, and Menu Items: */
@@ -31,10 +33,12 @@
 
      /* Callback Prototypes: */ 
 
+int  CVICALLBACK changeEcho(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK changeVolume(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK COM_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK distortion_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK distortionChange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK echo_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK quit_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 
