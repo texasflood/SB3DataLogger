@@ -99,11 +99,11 @@ void ComCallback(int portNumber, int eventMask,void *CallbackData)
 	{
 		get_vol(&volValue);
 		
-		SetCtrlVal(panelHandle, PANEL_output_volume_slide, volValue - 123);
+		SetCtrlVal(panelHandle, PANEL_output_volume_slide, volValue - 120);
 	}
 }
 
-int CVICALLBACK trebleChange (int panel, int control, int event,
+/*int CVICALLBACK trebleChange (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
 {
 	double trebleValue;
@@ -113,5 +113,17 @@ int CVICALLBACK trebleChange (int panel, int control, int event,
 	
 	set_treble(trebleValue);
 	
+	return 0;
+}*/
+
+int CVICALLBACK changeVolume (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	int volumeValue;
+	if (event!=EVENT_COMMIT) return 0;  
+	
+	GetCtrlVal(panel, control, &volumeValue);
+	
+	set_volume(volumeValue);
 	return 0;
 }

@@ -21,8 +21,7 @@
 #define  PANEL_COM_connect               5       /* callback function: COM_button_hit */
 #define  PANEL_distortion                6       /* callback function: distortionChange */
 #define  PANEL_output_volume_slide       7
-#define  PANEL_Treble                    8       /* callback function: trebleChange */
-#define  PANEL_trebleSwitch              9
+#define  PANEL_NUMERICSLIDE              8       /* callback function: changeVolume */
 
 
      /* Menu Bars, Menus, and Menu Items: */
@@ -32,11 +31,11 @@
 
      /* Callback Prototypes: */ 
 
+int  CVICALLBACK changeVolume(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK COM_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK distortion_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK distortionChange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK quit_button_hit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK trebleChange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 
 #ifdef __cplusplus

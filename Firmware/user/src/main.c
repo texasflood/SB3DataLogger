@@ -52,6 +52,7 @@ void Delay(__IO uint32_t nCount);
 volatile int command_flag;
 volatile int value;
 volatile int value_received;
+volatile int volume = 1;
 
 //ADC variables
 volatile uint8_t new_data;
@@ -87,8 +88,6 @@ int main(void)
 	
 	distortInit(signOfANeg, a, m, d);
 	fillLookup(signOfANeg, a, m, d);
-	shelvingHighSwitch(1);
-	shelvingHighInitialise(21645, -34644, 14459, -2807, 997);
 	TIM2_init();
 	TIM3_init();
 	DAC_config();
@@ -162,11 +161,27 @@ void check_and_process_received_command(void)
 			TIM_DeInit(TIM3);
 			DAC_SetChannel1Data(DAC_Align_12b_R, 2048);
 			d = (uint64_t) value;
+			if (d >= 2)
+			{
+				a = 30;
+			}
+			else
+			{
+				a = 0;
+			}
 			distortInit(signOfANeg, a, m, d);
 			fillLookup(signOfANeg, a, m, d);
 			TIM3_init();
 		}
 		
+	}
+	else if (command_flag == 4)
+	{
+		if (value_received == 1)
+		{
+			command_flag = 0;
+			volume = value;
+		}
 	}
 }
 

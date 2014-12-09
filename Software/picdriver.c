@@ -18,11 +18,12 @@
 
 //Define transmit and receive buffer
 BYTE rx_buff[RX_BUFF_LEN];
-BYTE tx_buff[2];
+BYTE tx_buff[4];
 static int com_port_no;
 static int com_port_open = 0;
 const double fc = 15000;
 const double fs = 44037;
+double globalDistortionValue = 1;
 double K;
 //RS232 functions
 
@@ -138,6 +139,7 @@ int switch_distortion (int value)
 //Command to set Distortion value
 int set_distortion (int value)
 {
+	globalDistortionValue = (double) value;
 	if (com_port_open == 0)
 	{
 		MessagePopup ("Error", "No Open COM Port");
@@ -172,9 +174,73 @@ int get_vol(unsigned char *volValue)
 	
 	return no_error;
 }
+
+int set_volume (int value)
+{
+	if (com_port_open == 0)
+	{
+		MessagePopup ("Error", "No Open COM Port");
+		return 0;
+	}
+	value = 11 - value;
+	tx_buff[0] = 4;	//Command
+	tx_buff[1] = value; 	//value
+	
+	send_command(2);
+	
+	
+  return no_error;
+}
+
+/*int set_offset (int offset)
+{
+	BYTE sign;
+	BYTE firstPart;
+	BYTE secondPart;
+	
+	if (offset > 0)
+	{
+		sign = 0;
+	}
+	else
+	{
+		sign = 1;
+	}
+	
+	offset = abs(offset);
+	
+	if (offset > floor(512 - 1023/(2*globalDistortionValue)))
+	{
+		offset = (int) floor(512 - 1023/(2*globalDistortionValue));
+	}
+	
+	offset = abs(offset);
+	
+	if (offset >= 2)
+	{
+		offset = offset - 2;
+	}
+	else
+	{
+		offset = 0;
+	}
+	
+	firstPart = (BYTE) offset;
+	secondPart = (BYTE) (offset >> 8);
+	
+	tx_buff[0] = 6;
+	tx_buff[1] = sign;
+	tx_buff[2] = firstPart;
+	tx_buff[3] = secondPart;
+	
+	send_command(3);
+	
+	return no_error;
+}*/
+
 int set_treble (double value)
 {
-	double b0f, b1f, b2f, a1f, a2f, V0;
+	/*double b0f, b1f, b2f, a1f, a2f, V0;
 	int b0i, b1i, b2i, a1i, a2i;
 	if (com_port_open == 0)
 	{
@@ -199,7 +265,7 @@ int set_treble (double value)
 	tx_buff[3] = b2i;
 	tx_buff[4] = a1i;
 	tx_buff[5] = a2i;
-	send_command(2);
+	send_command(2); */
 	
 	
   return no_error;

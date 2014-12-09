@@ -10,7 +10,6 @@
 extern volatile int command_flag;
 extern volatile int value;
 extern volatile int value_received;
-
 //Prvate functions
 void GPIO_Config(void);
 void NVIC_Config(void);

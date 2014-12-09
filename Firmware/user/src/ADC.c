@@ -36,20 +36,12 @@ uint64_t C;
 uint64_t D;
 uint64_t xL;
 int distortionOn = 0;
-//uint64_t E = 384858382;
-//uint64_t F = 3489025723049;
 
 void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void distortionSwitch(int distortionSet);
-// NEW Shelving constants
-int shelvingHighOn = 0;
-static int a_high[3];
-static int b_high[3];
-static int y[2];
-static int x[2];
-int array_position;
 int output;
+extern volatile int volume;
 //------------------------------------------------------------------------
 
 //Initialise ADC for independent sampling on demand
@@ -156,51 +148,8 @@ void ADC1_IRQHandler(void)
 		ADCVal = lookup[ADCVal];
 		ADCVal = ADCVal << 2;
 	}
-	/*E = 56786*F -89/E + A;
-	F = 3532/F + 2354*E;
-	E = 56786*F -89/E + A;
-	F = 332/F + 2354*E;
-	E = 5786*F -892/E + A;
-	F = 353/F + 2354*E;
-	E = 5676*F -249/E - A;
-	F = 3532/F + 23534*E;
-	E = 56786*F -89/E + A*8573;
-	F = 3532/F + 2354*E;
-	F = 353/F + 2354*E;
-	E = 5676*F -249/E - A;*/
-	
-	if (shelvingHighOn == 1)
-	{
-		if(array_position == 0)
-		{
-			// If x[1],y[1] hold the previous(delay 1) value
-			output = b_high[0]*ADCVal + b_high[1]*x[1] + b_high[2]*x[0] - a_high[1]*y[1] - a_high[2]*y[0];
-			y[0] = output;
-			x[0] = ADCVal;
-			array_position = 1;
-		}
-		else
-		{
-			// If x[0],y[0] hold the previous(delay 1) value
-			output = b_high[0]*ADCVal + b_high[1]*x[0] + b_high[2]*x[1] - a_high[1]*y[0] - a_high[2]*y[1];
-			y[1] = output;
-			x[1] = ADCVal;
-			array_position = 0;
-		}
-
-		// Scale the output
-		output = (output/3270) ;
-	}
-	if (output > 4095)
-	{
-		output = 4095;
-	}
-	if (output < 0)
-	{
-		output = 0;
-	}
-	
-	DAC_SetChannel1Data(DAC_Align_12b_R, output);
+	ADCVal = ADCVal / volume;
+	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
 	
 	/*if (ADC_count_2 > ADC_BUFFER_SIZE_2)
 	{
@@ -255,11 +204,11 @@ void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
        y = (A - B1*xL - B2*xL + C*squared - D*xL*squared);
        y = y/(4*m*m);
        //printf("y = %llu, x = %llu\n",y,xL);
-       if(xL >= a + m/2 + m/(2*d))
+       if(xL >= a + m/2 + m/(2*d) - 1)
        {
            lookup[xL] = (uint16_t)m;
        }
-       else if(xL <= a + m/2 - m/(2*d))
+       else if(xL <= a + m/2 - m/(2*d) + 1)
        {
            lookup[xL] = 0;
        }
@@ -271,14 +220,14 @@ void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d)
    }
    else
    {
-       y = (A - B1*xL + B2*xL + C*squared - D*xL*squared);
+       y = (A - B1*xL + B2*xL + C*squared - D*xL*squared); 
        y = y/(4*m*m);
        //printf("y = %llu, x = %llu\n",y,xL);
-       if(xL >= -a + m/2 + m/(2*d))
+       if(xL >= -a + m/2 + m/(2*d) - 1)
        {
            lookup[xL] = (uint16_t)m;
        }
-       else if(xL <= -a + m/2 - m/(2*d))
+       else if(xL <= -a + m/2 - m/(2*d) + 1)
        {
            lookup[xL] = 0;
        }
@@ -304,28 +253,4 @@ uint16_t getVol(void)
 void clearVol(void)
 {
 	max_vol = 0;
-}
-// NEW
-void shelvingHighSwitch(int shelvingSet)
-{
-shelvingHighOn = shelvingSet;
-}
-
-// NEW
-void shelvingHighInitialise(int coefficient1, int coefficient2, int coefficient3, int coefficient4, int coefficient5)
-{
-int i;
-b_high[0] = coefficient1;
-b_high[1] = coefficient2;
-b_high[2] = coefficient3;
-a_high[1] = coefficient4;
-a_high[2] = coefficient5;
-
-for(i=0; i<2; i++)
-{
-x[i] = 0;
-y[i] = 0;
-}
-
-array_position = 0;
 }

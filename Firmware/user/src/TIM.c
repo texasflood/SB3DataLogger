@@ -19,7 +19,7 @@ void TIM2_init(void)
 
 	//Init timer
   TIM_TimeBaseStructure.TIM_Period = 65535;
-  TIM_TimeBaseStructure.TIM_Prescaler = 80;
+  TIM_TimeBaseStructure.TIM_Prescaler = 30;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	

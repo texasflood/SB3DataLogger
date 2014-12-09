@@ -11,3 +11,5 @@ int set_distortion (int value);
 int get_vol(unsigned char *value);
 void ComCallback(int portNumber, int eventMask,void *CallbackData);
 int set_treble (double value);
+int set_offset(int offset);
+int set_volume (int value);
