@@ -55,6 +55,9 @@ volatile int value_received;
 
 //ADC variables
 volatile uint8_t new_data;
+//Max vol variables
+volatile uint8_t new_vol = 0;
+volatile uint16_t max_vol = 0;
 //------------------------------------------------------------------------------
 
 //Function prototypes for functions in main.c file
@@ -62,10 +65,11 @@ volatile uint8_t new_data;
 void check_and_process_received_command(void);
 void LED_flash(void);
 void DAC_config(void);
+void send_new_vol(void);
 int signOfANeg = 1;
 uint64_t a = 0;
-uint64_t m = 906;
-uint64_t d = 20;
+uint64_t m = 1023;
+uint64_t d = 1;
 //------------------------------------------------------------------------------
 
 //Main function (execution starts here after startup file)
@@ -83,7 +87,9 @@ int main(void)
 	
 	distortInit(signOfANeg, a, m, d);
 	fillLookup(signOfANeg, a, m, d);
-	//TIM2_init();
+	shelvingHighSwitch(1);
+	shelvingHighInitialise(21645, -34644, 14459, -2807, 997);
+	TIM2_init();
 	TIM3_init();
 	DAC_config();
 	ADC_init();
@@ -93,7 +99,13 @@ int main(void)
 	while (1)
 	{
 		check_and_process_received_command();
-		//LED_flash();
+		
+		if (new_vol ==1)
+		{
+			send_new_vol();
+			new_vol = 0;
+			max_vol = 0;
+		}
 	}
 	//------------------------------------------------------------------------------
 }
@@ -142,7 +154,7 @@ void check_and_process_received_command(void)
 			distortionSwitch(value);
 		}
 	}
-	else if (command_flag == 4)
+	else if (command_flag == 3)
 	{
 		if (value_received == 1)
 		{
@@ -178,6 +190,16 @@ void DAC_config(void)
 		
 	// Enable DAC
 	DAC_Cmd(DAC_Channel_1, ENABLE);
+}
+
+void send_new_vol(void)
+{
+	uint8_t byte1;
+	
+	byte1 = (uint8_t) ((max_vol >> 2) & 0xFF);
+	
+	UART_send_byte(1);
+	UART_send_byte(byte1);
 }
 
 /**

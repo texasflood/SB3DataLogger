@@ -6,6 +6,8 @@ void RS232_Close(void);
 unsigned char* Read_Data_Block(void);
 void send_command(int n);
 
-int read_analog_input (int *value);
 int switch_distortion (int value);
 int set_distortion (int value);
+int get_vol(unsigned char *value);
+void ComCallback(int portNumber, int eventMask,void *CallbackData);
+int set_treble (double value);

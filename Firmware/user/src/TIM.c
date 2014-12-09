@@ -5,6 +5,8 @@
 
 
 int ADC_count = 0;
+extern volatile uint8_t new_vol;
+extern volatile uint16_t max_vol;
 
 void NVIC_Configuration(void);
 
@@ -16,8 +18,8 @@ void TIM2_init(void)
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
 	//Init timer
-  TIM_TimeBaseStructure.TIM_Period = 10000 - 1;
-  TIM_TimeBaseStructure.TIM_Prescaler = SystemCoreClock/10000 - 1;
+  TIM_TimeBaseStructure.TIM_Period = 65535;
+  TIM_TimeBaseStructure.TIM_Prescaler = 80;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	
@@ -41,7 +43,9 @@ void TIM2_IRQHandler(void)
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 		
-		LED_toggle();
+		max_vol = getVol();
+		
+		new_vol = 1;
 		
 		/*ADC_results[ADC_count++] = ADC_perform_single_conversion();
 		
@@ -60,7 +64,7 @@ void TIM3_init(void)
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
 	//Init timer
-  TIM_TimeBaseStructure.TIM_Period = 1; //65535
+  TIM_TimeBaseStructure.TIM_Period = 1; 
   TIM_TimeBaseStructure.TIM_Prescaler = 545;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;

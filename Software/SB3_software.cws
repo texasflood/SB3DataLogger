@@ -8,11 +8,11 @@ Number of Projects = 1
 Active Project = 1
 Project 0001 = "SB3_software.prj"
 Drag Bar Left = 208
-Window Top = 62
-Window Left = 26
-Window Bottom = 564
-Window Right = 816
-Maximized = True
+Window Top = 434
+Window Left = 451
+Window Bottom = 895
+Window Right = 1342
+Maximized = False
 Maximized Children = False
 Max Number Of Errors = 20
 Track Include File Dependencies = True
@@ -45,53 +45,53 @@ Force Rebuild = False
 [File 0001]
 Path = "/c/3DAQ/Software/pictest.uir"
 File Type = "User Interface Resource"
-Disk Date = 3484132636
+Disk Date = 3484220102
 In Projects = "1,"
 Window Top = 342
 Window Left = 295
 Window Height = 470
 Window Width = 810
-Window Z-Order = 3
+Window Z-Order = 5
 
 [File 0002]
 Path = "/c/3DAQ/Software/picdriver.c"
 File Type = "CSource"
-Disk Date = 3484134928
+Disk Date = 3484224733
 In Projects = "1,"
-Window Top = 320
-Window Left = 834
-Window Z-Order = 2
-Source Window State = "1,65,65,65,5,17,17,0,0,80,0,0,0,0,0,25,128,0,151,0,349,676,1,0,"
+Window Top = 36
+Window Left = -7
+Window Z-Order = 1
+Source Window State = "1,195,195,195,4,21,21,0,0,80,0,0,0,0,0,25,183,0,196,17,349,676,1,0,"
 
 [File 0003]
 Path = "/c/3DAQ/Software/pictest.c"
 File Type = "CSource"
-Disk Date = 3484132299
+Disk Date = 3484221734
 In Projects = "1,"
 Window Top = 30
 Window Left = 843
-Window Z-Order = 1
-Source Window State = "1,36,36,36,4,41,41,0,0,95,0,28,0,0,0,25,80,0,100,4,349,794,1,90,"
+Window Z-Order = 4
+Source Window State = "1,52,54,52,20,21,20,0,0,95,0,29,0,1,0,25,93,0,113,28,349,794,1,90,"
 
 [File 0004]
 Path = "/c/3DAQ/Software/picdriver.h"
 File Type = "Include"
-Disk Date = 3484130855
+Disk Date = 3484219270
 In Projects = "1,"
 Window Top = 407
 Window Left = 116
-Window Z-Order = 5
-Source Window State = "1,9,9,9,8,11,8,0,0,80,0,0,0,0,0,25,0,0,10,31,349,676,1,0,"
+Window Z-Order = 2
+Source Window State = "1,10,10,10,0,14,14,0,0,80,0,0,0,0,0,25,0,0,1,16,349,676,1,0,"
 
 [File 0005]
 Path = "/c/3DAQ/Software/pictest.h"
 File Type = "Include"
-Disk Date = 3484132299
+Disk Date = 3484220103
 In Projects = "1,"
 Window Top = 32
 Window Left = 10
-Window Z-Order = 4
-Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,17,0,17,44,349,676,1,0,"
+Window Z-Order = 3
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,20,0,28,15,349,676,1,0,"
 
 [Build Options 0001]
 Generate Browse Info = True
@@ -123,24 +123,4 @@ External Process Path = ""
 
 [Command Line Args 0001]
 Command Line Args = ""
-
-[Watch Point 1]
-Watch Expression = "tx_buff"
-Update Display Continuously = True
-Break When Value Changes = False
-Scope = "Local"
-File = "picdriver.c"
-Function = "set_distortion"
-DllName = "SB3_software_dbg.exe"
-Project = 1
-
-[Watch Point 2]
-Watch Expression = "tx_buff"
-Update Display Continuously = True
-Break When Value Changes = False
-Scope = "Local"
-File = "picdriver.c"
-Function = "send_command"
-DllName = "SB3_software_dbg.exe"
-Project = 1
 

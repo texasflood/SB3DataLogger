@@ -1,13 +1,14 @@
+#define M_PI 3.14159265358979323846264338327 
 #include <ansi_c.h>
 #include <cvirte.h>		
 #include <userint.h>
- 
+
 #include <stdio.h>
 #include <windows.h> 
 #include <rs232.h>
-
+#include <math.h> 
 #include "picdriver.h"
-
+#include"pictest.h"
 
 #define READ_VERSION    0
 #define MSG    8
@@ -18,10 +19,11 @@
 //Define transmit and receive buffer
 BYTE rx_buff[RX_BUFF_LEN];
 BYTE tx_buff[2];
-
 static int com_port_no;
 static int com_port_open = 0;
-
+const double fc = 15000;
+const double fs = 44037;
+double K;
 //RS232 functions
 
 //Open a COM port
@@ -142,7 +144,7 @@ int set_distortion (int value)
 		return 0;
 	}
 	
-	tx_buff[0] = 4;	//Command
+	tx_buff[0] = 3;	//Command
 	tx_buff[1] = value; 	//value
 	
 	send_command(2);
@@ -150,3 +152,56 @@ int set_distortion (int value)
 	
   return no_error;
 }
+
+int get_vol(unsigned char *volValue)
+{
+	BYTE buffer[2];
+	
+	if (com_port_open == 0)
+	{
+		MessagePopup ("Error", "No Open COM Port");
+		return 0;
+	}
+	
+	if (GetInQLen(com_port_no) >= 2)
+	{
+		ComRd(com_port_no, buffer, 2);
+	}
+	
+	*volValue = buffer[1];
+	
+	return no_error;
+}
+int set_treble (double value)
+{
+	double b0f, b1f, b2f, a1f, a2f, V0;
+	int b0i, b1i, b2i, a1i, a2i;
+	if (com_port_open == 0)
+	{
+		MessagePopup ("Error", "No Open COM Port");
+		return 0;
+	}
+	
+	V0 = pow(10,(value/20));
+	K = tan((M_PI*fc)/fs);
+	if (value >= 0)
+	{
+		b0f = (V0 + sqrt(2*V0)*K + pow(K,2))/(1 + sqrt(2)*K + pow(K,2));
+	}
+	
+	
+	
+	
+	
+	tx_buff[0] = 5;	//Command
+	tx_buff[1] = b0i; 	//value
+	tx_buff[2] = b1i;
+	tx_buff[3] = b2i;
+	tx_buff[4] = a1i;
+	tx_buff[5] = a2i;
+	send_command(2);
+	
+	
+  return no_error;
+}
+
