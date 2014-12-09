@@ -29,6 +29,7 @@ uint16_t getVol(void);
 
 extern volatile uint16_t max_vol;
 static uint16_t lookup[1024];
+static uint16_t echo[2000];
 uint64_t A;
 uint64_t B1;
 uint64_t B2;

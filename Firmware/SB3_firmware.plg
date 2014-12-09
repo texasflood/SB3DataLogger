@@ -8,216 +8,77 @@ Project File Date:  05/23/2014
 
 <h2>Output:</h2>
 Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
 linking...
-Program Size: Code=7668 RO-data=320 RW-data=184 ZI-data=3904  
+Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
+Build target 'SB3'
+linking...
+Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=7884  
 "SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
 Build target 'SB3'
 compiling ADC.c...
-user\src\ADC.c(227): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(230): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(230): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(236): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(47): warning:  #550-D: variable "a_high" was set but never used
-user\src\ADC.c(48): warning:  #550-D: variable "b_high" was set but never used
-user\src\ADC.c(49): warning:  #550-D: variable "y" was set but never used
-user\src\ADC.c(50): warning:  #550-D: variable "x" was set but never used
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
 linking...
-Program Size: Code=7408 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 8 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7408 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-user\src\main.c(182): error:  #20: identifier "signOfA" is undefined
-compiling UART.c...
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching adc.o(.bss).
+SB3_firmware.axf: Error: L6407E: Sections of aggregate size 0x2038 bytes could not fit into .ANY selector(s).
 Target not created
 Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7344 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7344 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-linking...
-Program Size: Code=7344 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-linking...
-Program Size: Code=7344 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-linking...
-Program Size: Code=7344 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
 compiling ADC.c...
-user\src\ADC.c(227): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(230): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(230): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(236): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(47): warning:  #550-D: variable "a_high" was set but never used
-user\src\ADC.c(48): warning:  #550-D: variable "b_high" was set but never used
-user\src\ADC.c(49): warning:  #550-D: variable "y" was set but never used
-user\src\ADC.c(50): warning:  #550-D: variable "x" was set but never used
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
 linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 8 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7232 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling ADC.c...
-user\src\ADC.c(213): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(216): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(222): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(45): warning:  #550-D: variable "a_high" was set but never used
-user\src\ADC.c(46): warning:  #550-D: variable "b_high" was set but never used
-user\src\ADC.c(47): warning:  #550-D: variable "y" was set but never used
-user\src\ADC.c(48): warning:  #550-D: variable "x" was set but never used
-compiling main.c...
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 8 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling TIM.c...
-linking...
-Program Size: Code=7264 RO-data=320 RW-data=184 ZI-data=3904  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Build target 'SB3'
-compiling ADC.c...
-user\src\ADC.c(214): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(217): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(223): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(45): warning:  #550-D: variable "a_high" was set but never used
-user\src\ADC.c(46): warning:  #550-D: variable "b_high" was set but never used
-user\src\ADC.c(47): warning:  #550-D: variable "y" was set but never used
-user\src\ADC.c(48): warning:  #550-D: variable "x" was set but never used
-compiling main.c...
-compiling UART.c...
-linking...
-Program Size: Code=7192 RO-data=320 RW-data=180 ZI-data=3908  
-"SB3_firmware.axf" - 0 Error(s), 8 Warning(s).
-Build target 'SB3'
-linking...
-Program Size: Code=7192 RO-data=320 RW-data=180 ZI-data=3908  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Build target 'SB3'
-compiling ADC.c...
-user\src\ADC.c(176): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(179): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(179): warning:  #68-D: integer conversion resulted in a change of sign
-user\src\ADC.c(185): warning:  #68-D: integer conversion resulted in a change of sign
-linking...
-SB3_firmware.axf: Error: L6218E: Undefined symbol shelvingHighSwitch (referred from main.o).
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching startup_stm32f10x_md_vl.o(STACK).
+SB3_firmware.axf: Error: L6407E: Sections of aggregate size 0x400 bytes could not fit into .ANY selector(s).
 Target not created
 Build target 'SB3'
-compiling main.c...
+compiling ADC.c...
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
 linking...
-Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=3884  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching libspace.o(.bss).
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching adc.o(.data).
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching main.o(.data).
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching stm32f10x_rcc.o(.data).
+SB3_firmware.axf: Error: L6407E: Sections of aggregate size 0xf0 bytes could not fit into .ANY selector(s).
+Target not created
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
+linking...
+SB3_firmware.axf: Error: L6406E: No space in execution regions with .ANY selector matching main.o(.data).
+SB3_firmware.axf: Error: L6407E: Sections of aggregate size 0x38 bytes could not fit into .ANY selector(s).
+Target not created
+Build target 'SB3'
+compiling ADC.c...
+user\src\ADC.c(177): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(180): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(186): warning:  #68-D: integer conversion resulted in a change of sign
+user\src\ADC.c(32): warning:  #177-D: variable "echo" was declared but never referenced
+linking...
+Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=7884  
+"SB3_firmware.axf" - 0 Error(s), 5 Warning(s).
 Build target 'SB3'
 linking...
-Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=3884  
+Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=7884  
 "SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-linking...
-Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=3884  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=3884  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 
-Build target 'SB3'
-compiling main.c...
-linking...
-Program Size: Code=7172 RO-data=320 RW-data=148 ZI-data=3884  
-"SB3_firmware.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\3DAQ\\Firmware\\SB3_firmware.AXF" 

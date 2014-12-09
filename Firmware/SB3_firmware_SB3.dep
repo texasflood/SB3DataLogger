@@ -32,7 +32,7 @@ I (.\lib\stm32f10x_stdperiph_driver\inc\stm32f10x_tim.h)(0x537F57E9)
 I (.\lib\stm32f10x_stdperiph_driver\inc\stm32f10x_usart.h)(0x537F57E9)
 I (.\lib\stm32f10x_stdperiph_driver\inc\stm32f10x_wwdg.h)(0x537F57E9)
 I (.\lib\stm32f10x_stdperiph_driver\inc\misc.h)(0x537F57E8)
-F (.\user\src\ADC.c)(0x5388AFEE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I.\lib\cmsis\cm3\coresupport -I.\lib\cmsis\cm3\devicesupport\st\stm32f10x -I.\lib\stm32f10x_stdperiph_driver\inc -I.\user\inc -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -o "adc.o" --omf_browse "adc.crf" --depend "adc.d")
+F (.\user\src\ADC.c)(0x538C30D7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I.\lib\cmsis\cm3\coresupport -I.\lib\cmsis\cm3\devicesupport\st\stm32f10x -I.\lib\stm32f10x_stdperiph_driver\inc -I.\user\inc -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -o "adc.o" --omf_browse "adc.crf" --depend "adc.d")
 I (.\lib\cmsis\cm3\devicesupport\st\stm32f10x\stm32F10x.h)(0x537F57E7)
 I (.\lib\cmsis\cm3\coresupport\core_cm3.h)(0x537F57E7)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB15114)
