@@ -31,6 +31,9 @@ uint64_t B2;
 uint64_t C;
 uint64_t D;
 uint64_t xL;
+int distortionOn = 1;
+uint64_t E = 384858382;
+uint64_t F = 3489025723049;
 
 void distortInit(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
 void fillLookup(int signOfANeg, uint64_t a, uint64_t m, uint64_t d);
@@ -93,7 +96,7 @@ void ADC_Config(void)
 	ADC_ExternalTrigConvCmd(ADC1, ENABLE);
 	
 	//ADC1 regular channels configuration (just one channel)
-  ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_1Cycles5);    
+  ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_239Cycles5);    
 	
 	//power up ADC
 	ADC_Cmd(ADC1, ENABLE);
@@ -105,7 +108,7 @@ void ADC_Config(void)
 void ADC_RCC_Config(void)
 {
 	//Set ADC clock divider
-	RCC_ADCCLKConfig(RCC_PCLK2_Div8);
+	RCC_ADCCLKConfig(RCC_PCLK2_Div2);
 	
 	//Enable DMA periph clock
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
@@ -130,9 +133,18 @@ void ADC1_IRQHandler(void)
 	
 	//ADC_results_2[ADC_count_2++] = ADC_GetConversionValue(ADC1);
 	ADCVal = ADC_GetConversionValue(ADC1);
-	ADCVal = (ADCVal >> 2);
-	ADCVal = lookup[ADCVal];
-	ADCVal = ADCVal << 2;
+	if (distortionOn == 1)
+	{
+		ADCVal = (ADCVal >> 2);
+		ADCVal = lookup[ADCVal];
+		ADCVal = ADCVal << 2;
+	}
+	E = E*67 + 20*F;
+	F = 60284*98 + E/901;
+	E = E*67 + 20*F;
+	F = 60284*9758 + E/91;
+	E = E*67 + 20*F;
+	F = 6074*98 + E/999;
 	DAC_SetChannel1Data(DAC_Align_12b_R, ADCVal);
 	
 	/*if (ADC_count_2 > ADC_BUFFER_SIZE_2)
@@ -140,7 +152,7 @@ void ADC1_IRQHandler(void)
 		ADC_count_2 = 0;
 	}*/
 	
-	LED_toggle();
+	//LED_toggle();
 }
 
 void ADC_NVIC_Config(void)

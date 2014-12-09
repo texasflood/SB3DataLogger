@@ -19,8 +19,8 @@ void TIM2_init(void)
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
 	//Init timer
-  TIM_TimeBaseStructure.TIM_Period = 65535;
-  TIM_TimeBaseStructure.TIM_Prescaler = 366;
+  TIM_TimeBaseStructure.TIM_Period = 10000 - 1;
+  TIM_TimeBaseStructure.TIM_Prescaler = SystemCoreClock/10000 - 1;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	
@@ -46,12 +46,12 @@ void TIM2_IRQHandler(void)
 		
 		LED_toggle();
 		
-		ADC_results[ADC_count++] = ADC_perform_single_conversion();
+		/*ADC_results[ADC_count++] = ADC_perform_single_conversion();
 		
 		if (ADC_count > ADC_BUFFER_SIZE)
 		{
 			ADC_count = 0;
-		}
+		}*/
 	}
 }
 
@@ -64,7 +64,7 @@ void TIM3_init(void)
 
 	//Init timer
   TIM_TimeBaseStructure.TIM_Period = 1; //65535
-  TIM_TimeBaseStructure.TIM_Prescaler = 1;
+  TIM_TimeBaseStructure.TIM_Prescaler = 500;
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	

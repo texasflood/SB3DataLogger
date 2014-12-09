@@ -63,30 +63,31 @@ void check_and_process_received_command(void);
 void LED_flash(void);
 void DAC_config(void);
 int signOfANeg = 1;
-uint64_t a = 70;
+uint64_t a = 0;
 uint64_t m = 1023;
-uint64_t d = 3;
+uint64_t d = 5;
 //------------------------------------------------------------------------------
 
 //Main function (execution starts here after startup file)
 int main(void)
 {
 	int i;
-	
 	//Initalise LEDs
-	//LED_init();
-	
+	LED_init();
 	//Short delay during which we can communicate with MCU via debugger even if later user code causes error such as sleep state with no wakeup event that prevents debugger interface working
 	//THIS MUST COME BEFORE ALL USER CODE TO ENSURE CHIPS CAN BE REPROGRAMMED EVEN IF THEY GET STUCK IN A SLEEP STATE LATER
 	for (i = 0; i < 4000000; i++)
 	{
 		LED_on();
 	}
+	
 	distortInit(signOfANeg, a, m, d);
 	fillLookup(signOfANeg, a, m, d);
+	//TIM2_init();
 	TIM3_init();
 	DAC_config();
 	ADC_init();
+	UART_init();
 	//Main loop
 	//------------------------------------------------------------------------------
 	while (1)
